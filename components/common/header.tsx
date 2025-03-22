@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FileText, DollarSign, LogIn, Upload } from "lucide-react";
+import { FileText, DollarSign, LogIn, Upload, Crown } from "lucide-react";
+import { Button } from "../ui/button";
 
 export default function Header() {
   const isLoggedIn = true; // Change this value to simulate login status
@@ -28,11 +29,11 @@ export default function Header() {
           </Link>
           {isLoggedIn ? (
             <>
+              {/* Dashboard: no icon */}
               <Link
                 href="/dashboard"
-                className="flex items-center gap-2 text-gray-800 transition-colors duration-300 delay-75 hover:text-blue-600"
+                className="text-gray-800 transition-colors duration-300 delay-75 hover:text-blue-600"
               >
-                <DollarSign className="w-5 h-5 lg:w-6 lg:h-6 stroke-current fill-transparent transition-all duration-300 ease-in-out transform hover:rotate-12 hover:fill-current" />
                 <span>Your Summary</span>
               </Link>
               <Link
@@ -42,6 +43,15 @@ export default function Header() {
                 <Upload className="w-5 h-5 lg:w-6 lg:h-6 stroke-current fill-transparent transition-all duration-300 ease-in-out transform hover:rotate-12 hover:fill-current" />
                 <span>Upload a PDF</span>
               </Link>
+              {/* Pro Link with Crown icon */}
+              <Link
+                href="/pro"
+                className="flex items-center gap-2 text-gray-800 transition-colors duration-300 delay-75 hover:text-blue-600"
+              >
+                <Crown className="w-5 h-5 lg:w-6 lg:h-6 stroke-current fill-transparent transition-all duration-300 ease-in-out transform hover:rotate-12 hover:fill-current" />
+                <span>Pro</span>
+              </Link>
+              <Button>Signout</Button>
             </>
           ) : (
             <Link
