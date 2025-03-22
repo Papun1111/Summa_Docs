@@ -3,7 +3,7 @@ import { FileText, DollarSign, LogIn, Upload, Crown } from "lucide-react";
 import { Button } from "../ui/button";
 
 export default function Header() {
-  const isLoggedIn = true; // Change this value to simulate login status
+  const isLoggedIn = false; // Change this value to simulate login status
 
   return (
     <header className="bg-white shadow">
