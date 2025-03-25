@@ -1,5 +1,12 @@
-import { Button } from "@/components/ui/button";
-
+import HeroSection from "@/components/Home/hero-section";
 export default function Home() {
-  return <div></div>;
+  return (
+    <div className="relative w-full">
+      <HeroSection></HeroSection>
+      {/* <DemoSection></DemoSection>
+      <HowItWorksSection></HowItWorksSection>
+      <PricingSection></PricingSection>
+      <CTASection></CTASection> */}
+    </div>
+  );
 }
